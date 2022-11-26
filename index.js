@@ -26,7 +26,7 @@ app.use(function (req, res, next) {
     next()
 })
 
-var sampleRoutes = require('./app/routes/sample.routes')
+var sampleRoutes = require('./routes/sample.routes')
 
 app.use('/sample', sampleRoutes)
 app.use(cors(corsOption))
