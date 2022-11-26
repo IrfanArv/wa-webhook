@@ -34,7 +34,7 @@ app.use('/start', startBot)
 app.use(cors(corsOption))
 
 app.get('/', function (req, res) {
-    res.send('OK')
+    res.send('OKE')
 })
 
 app.use((req, res) =>
