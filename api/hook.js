@@ -11,7 +11,7 @@ module.exports = {
             // if ((buttonReplay = 2)) {
             //     console.log('Engga Beli')
             // }
-            response.sendStatus(200)
+            res.sendStatus(200)
         } catch (err) {
             let response = {
                 status: 400,
