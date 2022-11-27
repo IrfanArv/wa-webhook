@@ -4,10 +4,11 @@ var WABA = process.env.URL_WABA
 var KEYWABA = process.env.KEY_WABA
 
 module.exports = {
-    async main(req, res) {
+    main(req, res) {
         try {
             let res = JSON.stringify(req.body)
-            await axios({
+            console.log(res)
+            axios({
                 method: 'post',
                 url: `${WABA}v1/messages`,
                 headers: {
