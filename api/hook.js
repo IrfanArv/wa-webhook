@@ -1,11 +1,27 @@
-const endChat = require('./endChat')
+require('dotenv').config()
+var axios = require('axios')
+var WABA = process.env.URL_WABA
+var KEYWABA = process.env.KEY_WABA
 
 module.exports = {
     async main(req, res) {
         try {
             let res = JSON.stringify(req.body)
-            console.log(res)
-            endChat()
+            await axios({
+                method: 'post',
+                url: `${WABA}v1/messages`,
+                headers: {
+                    'D360-API-KEY': KEYWABA,
+                },
+                data: {
+                    recipient_type: 'individual',
+                    to: '682116982479',
+                    type: 'text',
+                    text: {
+                        body: 'Walah ngapain chat sini kalo gitu!',
+                    },
+                },
+            })
             // let data = JSON.parse(res)
             // let buttonReplay = data.messages[0].interactive.button_reply.id
             // if ((buttonReplay = 1)) {
