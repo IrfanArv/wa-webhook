@@ -15,30 +15,9 @@ module.exports = {
                 data: {
                     recipient_type: 'individual',
                     to: req.body.no_wa,
-                    type: 'interactive',
-                    interactive: {
-                        type: 'button',
-                        body: {
-                            text: 'Hallo, Mau ngapain ?',
-                        },
-                        action: {
-                            buttons: [
-                                {
-                                    type: 'reply',
-                                    reply: {
-                                        id: '1',
-                                        title: 'Engga ngapa2in',
-                                    },
-                                },
-                                {
-                                    type: 'reply',
-                                    reply: {
-                                        id: '2',
-                                        title: 'Belanja dong!',
-                                    },
-                                },
-                            ],
-                        },
+                    type: 'text',
+                    text: {
+                        body: 'Walah ngapain chat sini kalo gitu!',
                     },
                 },
             }).then(() => {

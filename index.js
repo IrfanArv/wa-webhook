@@ -28,9 +28,11 @@ app.use(function (req, res, next) {
 
 var sampleRoutes = require('./routes/sample.routes')
 var startBot = require('./routes/started.routes')
+var webHook = require('./routes/hook.routes')
 
 app.use('/sample', sampleRoutes)
 app.use('/start', startBot)
+app.use('/webhook', webHook)
 app.use(cors(corsOption))
 
 app.get('/', function (req, res) {
