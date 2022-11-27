@@ -3,9 +3,9 @@ const endChat = require('./endChat')
 module.exports = {
     async main(req, res) {
         try {
-            endChat
-            // let res = JSON.stringify(req.body)
-            // console.log(res)
+            let res = JSON.stringify(req.body)
+            console.log(res)
+            endChat()
             // let data = JSON.parse(res)
             // let buttonReplay = data.messages[0].interactive.button_reply.id
             // if ((buttonReplay = 1)) {

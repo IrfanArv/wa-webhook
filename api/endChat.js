@@ -14,7 +14,7 @@ module.exports = {
                 },
                 data: {
                     recipient_type: 'individual',
-                    to: req.body.no_wa,
+                    to: '682116982479',
                     type: 'text',
                     text: {
                         body: 'Walah ngapain chat sini kalo gitu!',
