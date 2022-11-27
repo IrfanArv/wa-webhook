@@ -3,6 +3,6 @@ const router = express.Router()
 const verifyAPI = require('../middleware/verifyKey.middleware')
 const webHook = require('../api').WebHook
 
-router.post('/', verifyAPI, webHook.main)
+router.post('/', verifyAPI, webHook())
 
 module.exports = router
