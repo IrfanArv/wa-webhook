@@ -19,42 +19,7 @@ app.get('/', function (req, res) {
 app.post('/webhook', function (request, response) {
     let res = JSON.stringify(request.body)
     let data = JSON.parse(res)
-    axios({
-        method: 'post',
-        url: `${WABA}v1/messages`,
-        headers: {
-            'D360-API-KEY': KEYWABA,
-        },
-        data: {
-            recipient_type: 'individual',
-            to: NOWA,
-            type: 'interactive',
-            interactive: {
-                type: 'button',
-                body: {
-                    text: 'Hallo, Mau ngapain ?',
-                },
-                action: {
-                    buttons: [
-                        {
-                            type: 'reply',
-                            reply: {
-                                id: '1',
-                                title: 'Engga ngapa2in',
-                            },
-                        },
-                        {
-                            type: 'reply',
-                            reply: {
-                                id: '2',
-                                title: 'Belanja dong!',
-                            },
-                        },
-                    ],
-                },
-            },
-        },
-    })
+
     response.sendStatus(200)
 })
 
