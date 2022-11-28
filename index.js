@@ -2,7 +2,7 @@ require('dotenv').config()
 var express = require('express'),
     port = process.env.PORT
 
-let indexRoutes = require('./routes/index.js')
+let indexRoutes = require('./routes/index.routes')
 
 const main = async () => {
     const app = express()
