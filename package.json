@@ -15,7 +15,7 @@
     "express": "^4.18.1",
     "pdfkit": "^0.13.0",
     "request": "^2.88.2",
-    "whatsappcloudapi_wrapper": "^1.0.11"
+    "whatsappcloudapi_wrapper": "^1.0.13"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",
