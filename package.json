@@ -19,7 +19,9 @@
     "crypto": "^1.0.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pdfkit": "^0.13.0",
+    "whatsappcloudapi_wrapper": "^1.0.13"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",

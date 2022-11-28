@@ -26,25 +26,16 @@ app.use(function (req, res, next) {
     next()
 })
 
-var sampleRoutes = require('./routes/sample.routes')
-var startBot = require('./routes/started.routes')
-var webHook = require('./routes/hook.routes')
+var mainRoutes = require('./routes/index.routes')
 
-app.use('/sample', sampleRoutes)
-app.use('/start', startBot)
-app.use('/webhook', webHook)
+app.use('/', mainRoutes)
 app.use(cors(corsOption))
 
 app.get('/', function (req, res) {
     res.send('OKE')
 })
 
-app.use((req, res) =>
-    res.status(404).json({
-        status: 404,
-        message: 'Request not found',
-    }),
-)
+app.use('*', (req, res) => res.status(404).send('404 Not Found'))
 
 app.listen(port, function () {
     console.log(`App is listening on port ${port}`)
