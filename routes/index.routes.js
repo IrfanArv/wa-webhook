@@ -6,7 +6,6 @@ const Whatsapp = new WhatsappCloudAPI({
     accessToken: process.env.Meta_WA_accessToken,
     senderPhoneNumberId: process.env.Meta_WA_SenderPhoneNumberId,
     WABA_ID: process.env.Meta_WA_wabaId,
-    graphAPIVersion: 'v13.0',
 })
 const EcommerceStore = require('../api/produkToko')
 let Store = new EcommerceStore()
